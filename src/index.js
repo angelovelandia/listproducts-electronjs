@@ -42,7 +42,7 @@ function createNewProductWindow() {
         height: 300,
         title: 'Add A New Product',
     })
-    //newProductWindow.setMenu(null)
+    newProductWindow.setMenu(null)
     newProductWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'views/new-product.html'),
         protocol: 'file',

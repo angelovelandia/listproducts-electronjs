@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <title>Products Electron</title>
+</head>
+<body>
+    <div class="container p-4">
+        <div class="row" id="products">
+
+        </div>
+    </div>
+    <script>
+        const { ipcRenderer } = require('electron');
+        const products = document.querySelector('#products')
+        
+        ipcRenderer.on('product:new', (e, data) => {
+            const newProdcutTemplate = `
+            <div class="col-xs-4 p-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h5 class="card-title">${data.name}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>${data.description}</p>
+                        <hr />
+                        ${data.price}
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-danger btn-sm">
+                            DELETE
+                        </button>
+                    </div>
+                </div>
+            </div>`;
+            products.innerHTML += newProdcutTemplate;
+            const btns = document.querySelectorAll('.btn.btn-danger')
+            btns.forEach(element => {
+                element.addEventListener('click', (e) => {
+                    e.target.parentElement.parentElement.parentElement.remove()
+                })
+            });
+        })
+        
+    </script>
+</body>
+</html>

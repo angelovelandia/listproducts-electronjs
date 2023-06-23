@@ -6,6 +6,7 @@ _Add and delete products, desktop application made in Electron JS_
 
 _To use this project you only need to have NODEJS and Electron installed. Download it and in the console run_
 
+`` npm install ``
 `` npm start ``
 
 ## Technology used 🛠️

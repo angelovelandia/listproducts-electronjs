@@ -1,26 +1,14 @@
 # listproduct-electronjs
 
-_Add and delete products, desktop application made in Electron JS_
+_Añadir y eliminar productos, aplicación de escritorio realizada en Electron JS_
 
-### Installation 🔧
+### Instalación 🔧
 
-_To use this project you only need to have NODEJS and Electron installed. Download it and in the console run_
+_Para usar este proyecto solo necesitas tener instalado NodeJS y Electron. Descárgalo y en la consola ejecuta_
 
 `` npm install ``
 `` npm start ``
 
-## Technology used 🛠️
+## Tecnología utilizada 🛠️
 
 * [ElectronJS](https://www.electronjs.org/)
-
-## Authors ✒️
-
-* **Angelo Velandia** - *Complete Work* - [angelovelandia](https://github.com/angelovelandia)
-
-## Expressions of Gratitude 🎁
-
-* Thank you for downloading the project and using it 📢
-* Donate with Paypal: `velandia_angelo@outlook.com`
-
----
-⌨️ with ❤️ by [angelovelandia](https://github.com/angelovelandia) 😊
